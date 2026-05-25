@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>IG Feed With Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .feed-container {
+            max-width: 600px;
+        }
+
+        .post-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .gallery-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+
+    <nav class="navbar navbar-light bg-light border-bottom">
+
+        <div class="container-fluid">
+
+            <!-- Logo -->
+
+            <span class="navbar-brand mb-0 h1">
+                <i class="bi bi-instagram"></i>
+                Instagram
+            </span>
+
+            <!-- Botones lado derecho -->
+
+            <div class="d-flex gap-2">
+
+                <!-- Botón de crear post -->
+
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createPostModal">
+
+                    Create a new post
+
+                </button>
+
+                <!-- Dropdown -->
+
+                <div class="dropdown">
+
+                    <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+
+                        <i class="bi bi-gear-fill"></i>
+
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Accessibility
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Privacy and Data
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-danger" href="#">
+                                Log out
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Botones de vista -->
+
+    <div class="container mt-4">
+
+        <ul class="nav nav-tabs justify-content-center border-0">
+
+            <!-- Botón Grid -->
+
+            <li class="nav-item">
+
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#grid-view">
+
+                    <i class="bi bi-grid-3x3"></i>
+
+                </button>
+
+            </li>
+
+            <!-- Botón del feed -->
+
+            <li class="nav-item">
+
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#feed-view">
+
+                    <i class="bi bi-square-fill"></i>
+
+                </button>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Tabla de contenido -->
+
+    <div class="tab-content">
+
+        <!-- Vista de grid -->
+
+        <div class="tab-pane fade show active" id="grid-view">
+
+            <div class="container mt-4">
+
+                <div class="row g-2">
+
+                    <!-- Post 1 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 2 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 3 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 4 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 5 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://plus.unsplash.com/premium_photo-1661504800337-17923a04bb77?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 6 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 7 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1251&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 8 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                    <!-- Post 9 -->
+
+                    <div class="col-12 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=800"
+                            class="gallery-img img-fluid">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Vista del feed -->
+
+        <div class="tab-pane fade" id="feed-view">
+
+            <div class="container feed-container mt-4">
+
+                <!-- Post 1 -->
+
+                <div class="card mb-4">
+
+                    <div class="card-header d-flex justify-content-between">
+
+                        <strong>My cute dog</strong>
+
+                        <span>08/15</span>
+
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="post-img">
+
+                    <div class="card-body">
+
+                        <p>
+                            Forever in our hearts.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Post 2 -->
+
+                <div class="card mb-4">
+
+                    <div class="card-header d-flex justify-content-between">
+
+                        <strong>Beautiful beach</strong>
+
+                        <span>08/27</span>
+
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800" class="post-img">
+
+                    <div class="card-body">
+
+                        <p>
+                            The beach view is amazing today
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Post 3 -->
+
+                <div class="card mb-4">
+
+                    <div class="card-header d-flex justify-content-between">
+
+                        <strong>My best friend</strong>
+
+                        <span>08/30</span>
+
+                    </div>
+
+                    <img src="https://plus.unsplash.com/premium_photo-1661504800337-17923a04bb77?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="post-img">
+
+                    <div class="card-body">
+
+                        <p>
+                            I love you
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal fade" id="createPostModal" tabindex="-1">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <!-- Encabezado del modal -->
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Create a new post
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <!-- Cuerpo del modal -->
+
+                <div class="modal-body">
+
+                    <label class="form-label">
+                        Caption:
+                    </label>
+
+                    <textarea class="form-control" rows="3" placeholder="Add the caption of your post here">
+                    </textarea>
+
+                    <!-- Íconos para botones -->
+
+                    <div class="mt-3 d-flex gap-2">
+
+                        <button class="btn btn-light border">
+
+                            <i class="bi bi-camera-fill"></i>
+
+                        </button>
+
+                        <button class="btn btn-light border">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Footer del modal -->
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+
+                        Close
+
+                    </button>
+
+                    <button type="button" class="btn btn-success">
+
+                        Publish
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap Script -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
